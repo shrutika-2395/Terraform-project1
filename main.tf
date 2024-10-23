@@ -43,14 +43,11 @@ resource "aws_security_group" "jenkins-sg-2022" {
 }
 
 resource "aws_instance" "myFirstInstance" {
-  ami           = var.ami_id
-  key_name = var.key_name
-  instance_type = var.instance_type
-  vpc_security_group_ids = [aws_security_group.jenkins-sg-2022.id]
-  tags= {
-    Name = var.tag_name
-  }
+  ami           = "ami-0866a3c8686eaeeba"  // Replace with your AMI ID
+  instance_type = "t2.medium"
+  key_name      = "TJ-key"  // Ensure this key pair exists
 }
+
 
 # Create Elastic IP address
 resource "aws_eip" "myFirstInstance" {
