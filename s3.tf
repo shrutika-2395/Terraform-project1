@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "my-s3-bucket" {
-  bucket = "mydev-project-terraform-batch-25"  # Ensure this name is globally unique
+  bucket = "my-unique-bucket-name"  # Ensure this name is globally unique
   tags = {
-    Name = "My S3 Bucket"
+    Name = "mydev-project-terraform-batch-25"
   }
 }
 
@@ -13,9 +13,7 @@ resource "aws_s3_bucket_acl" "my-s3-bucket-acl" {
 resource "aws_s3_bucket_versioning" "my-s3-bucket-versioning" {
   bucket = aws_s3_bucket.my-s3-bucket.id
 
-  versioning_configuration {
-    enabled = true
-  }
+  # Set the versioning status
+  status = "Enabled"  # Use "Enabled" or "Suspended"
 }
-
 
