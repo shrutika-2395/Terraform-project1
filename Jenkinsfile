@@ -18,6 +18,8 @@ checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs:
                 sh ("terraform plan") 
             }
         }
+terraform plan -out=my_plan.tfplan
+terraform apply my_plan.tfplan
 
         stage (" Action") {
             steps {
