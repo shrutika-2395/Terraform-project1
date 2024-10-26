@@ -44,8 +44,8 @@ resource "aws_security_group" "jenkins-sg-2022" {
 
 resource "aws_instance" "myFirstInstance" {
   ami           = "ami-0866a3c8686eaeeba"  // Replace with your AMI ID
-  instance_type = "t2.medium"
-  key_name      = "project-key"  // Ensure this key pair exists
+  instance_type = "t2.micro"
+  key_name      = "terraform-key"  // Ensure this key pair exists
 }
 
 
