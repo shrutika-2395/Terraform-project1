@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my-s3-bucket" {
-  bucket = "my-unique-bucket-name"  # Ensure this name is globally unique
+  bucket = "my-unique-bucket-shrutika"  # Ensure this name is globally unique
   tags = {
     Name = "My S3 Bucket"
   }
