@@ -45,7 +45,7 @@ resource "aws_security_group" "jenkins-sg-2022" {
 resource "aws_instance" "myFirstInstance" {
   ami           = "ami-0866a3c8686eaeeba"  // Replace with your AMI ID
   instance_type = "t2.micro"
-  key_name      = "new-key"  // Ensure this key pair exists
+  key_name      = "chiku-key"  // Ensure this key pair exists
 }
 
 
