@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "my_s3_bucket" {
   bucket = "my-unique-bucket-shrutika"
 }
 
-resource "aws_s3_bucket_object" "my_object" {
+resource "aws_s3_object" "my_object" {
   bucket = aws_s3_bucket.my_s3_bucket.bucket
   key    = "example.txt"
   source = "example.txt"
